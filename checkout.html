@@ -1,24 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Checkout</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Bodhicariya Students</title>
+<meta name="description" content="Secure checkout - Bodhicariya Students">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVV2P85HJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2GVV2P85HJ');
+</script>
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+.checkout-container{
+max-width:600px;
+margin:80px auto;
+background:#1e293b;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+.checkout-container h2{
+margin-bottom:30px;
+text-align:center;
+}
+
+.checkout-container input,
+.checkout-container select{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+border:none;
+border-radius:8px;
+}
+
+.payment-method{
+margin-bottom:20px;
+}
+
+.payment-method label{
+display:block;
+margin-bottom:10px;
+}
+
+.checkout-btn{
+width:100%;
+padding:15px;
+background:linear-gradient(45deg,#2563eb,#38bdf8);
+border:none;
+border-radius:8px;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.checkout-btn:hover{
+transform:scale(1.05);
+}
+</style>
+
 </head>
+
 <body>
 
-<h2>Checkout</h2>
+<header>
+<h1>Bodhicariya Students</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="cart.html">Cart</a>
+</nav>
+</header>
+
+<div class="checkout-container">
+<h2>Secure Checkout</h2>
 
 <form action="success.html">
-<input type="text" placeholder="Full Name" required><br><br>
-<input type="text" placeholder="Address" required><br><br>
 
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Shipping Address" required>
+<input type="text" placeholder="City" required>
+<input type="text" placeholder="Postal Code" required>
+
+<div class="payment-method">
 <h3>Select Payment Method</h3>
-<input type="radio" name="pay" required> UPI<br>
-<input type="radio" name="pay"> Credit/Debit Card<br>
-<input type="radio" name="pay"> Net Banking<br><br>
 
-<button type="submit">Pay Now</button>
+<label>
+<input type="radio" name="payment" required> UPI
+</label>
+
+<label>
+<input type="radio" name="payment"> Credit / Debit Card
+</label>
+
+<label>
+<input type="radio" name="payment"> Net Banking
+</label>
+
+<label>
+<input type="radio" name="payment"> Cash on Delivery
+</label>
+
+</div>
+
+<button type="submit" class="checkout-btn">Place Order</button>
+
 </form>
+
+</div>
 
 </body>
 </html>
