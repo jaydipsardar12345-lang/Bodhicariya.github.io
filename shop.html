@@ -1,51 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Shop</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Bodhicariya Students</title>
+<meta name="description" content="Explore the premium student collection at Bodhicariya Students.">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVV2P85HJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2GVV2P85HJ');
+</script>
+
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
+
 </head>
+
 <body>
 
 <header>
-<h1>Shop</h1>
+<h1>Bodhicariya Students</h1>
 <nav>
 <a href="index.html">Home</a>
 <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
 </nav>
 </header>
 
-<div class="products">
+<section class="products">
 
 <div class="card">
-<img src="photo1.jpg">
+<img src="photo1.jpg" alt="sexy boi">
 <h3>sexy boi</h3>
-<p>₹2999</p>
+<p class="price">₹2999</p>
 <button onclick="addToCart('sexy boi',2999)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="photo2.jpg">
+<img src="photo2.jpg" alt="handsome boi">
 <h3>handsome boi</h3>
-<p>₹1499</p>
+<p class="price">₹1499</p>
 <button onclick="addToCart('handsome boi',1499)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="photo3.jpg">
+<img src="photo3.jpg" alt="Nerdy boi">
 <h3>Nerdy boi</h3>
-<p>₹1799</p>
+<p class="price">₹1799</p>
 <button onclick="addToCart('Nerdy boi',1799)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="photo4.jpg">
+<img src="photo4.jpg" alt="Sleepy boi">
 <h3>Sleepy boi</h3>
-<p>₹999</p>
+<p class="price">₹999</p>
 <button onclick="addToCart('Sleepy boi',999)">Add to Cart</button>
 </div>
 
+<div class="card">
+<img src="photo1.jpg" alt="dublicate boi">
+<h3>dublicate boi</h3>
+<p class="price">₹499</p>
+<button onclick="addToCart('dublicate boi',499)">Add to Cart</button>
 </div>
+
+</section>
 
 </body>
 </html>
