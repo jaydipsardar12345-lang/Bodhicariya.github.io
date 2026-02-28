@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Google Analytics -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | Bodhicariya Students</title>
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVV2P85HJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-2GVV2P85HJ');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2GVV2P85HJ');
 </script>
-<title>Your Cart</title>
+
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
+
 </head>
+
 <body>
 
 <header>
 <h1>Your Cart</h1>
-<a href="shop.html">Back to Shop</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+</nav>
 </header>
 
+<section class="cart-section">
 <div id="cartItems"></div>
-<h3>Total: ₹<span id="total"></span></h3>
+
+<h3>Total: ₹<span id="total">0</span></h3>
 
 <a href="checkout.html" class="btn">Proceed to Checkout</a>
+</section>
 
 </body>
 </html>
