@@ -1,155 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jaydip Store</title>
+<title>Bodhicariya</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
+body{
+margin:0;
+font-family:Arial;
+background:#f8fafc;
 }
 
-header {
-    background: #111827;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#111827;
+color:white;
 }
 
-header h1 {
-    margin: 0;
+.logo{
+font-size:24px;
+font-weight:bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+.cart{
+cursor:pointer;
+background:#2563eb;
+padding:8px 15px;
+border-radius:5px;
 }
 
-.hero {
-    background: linear-gradient(to right, #2563eb, #3b82f6);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:50px;
 }
 
-.hero h2 {
-    font-size: 40px;
+.card{
+background:white;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+overflow:hidden;
+transition:0.3s;
 }
 
-.products {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
+.card-content{
+padding:20px;
 }
 
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+.price{
+font-weight:bold;
+margin:10px 0;
 }
 
-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+button{
+background:#2563eb;
+border:none;
+color:white;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+width:100%;
 }
 
-button:hover {
-    background: #1e40af;
+.cart-box{
+position:fixed;
+top:0;
+right:-400px;
+width:300px;
+height:100%;
+background:white;
+box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+padding:20px;
+transition:0.3s;
+overflow:auto;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111827;
-    color: white;
+.cart-box.active{
+right:0;
+}
+
+.cart-item{
+margin-bottom:10px;
+border-bottom:1px solid #ccc;
+padding-bottom:5px;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <h1>Jaydip Store</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
-    </nav>
+<div class="logo">Bodhicariya</div>
+<div class="cart" onclick="toggleCart()">Cart (<span id="cartCount">0</span>)</div>
 </header>
 
-<section class="hero">
-    <h2>Best Deals Just For You</h2>
-    <p>Shop our top 5 products today</p>
-</section>
+<div class="products">
 
-<section class="products">
+<div class="card">
+<img src="photo1.jpg">
+<div class="card-content">
+<h3>Product 1</h3>
+<div class="price">₹2999</div>
+<button onclick="addToCart('Product 1',2999)">Add to Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/300?1">
-        <h3>Smart Watch</h3>
-        <p class="price">₹2,999</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="card">
+<img src="photo2.jpg">
+<div class="card-content">
+<h3>Product 2</h3>
+<div class="price">₹1499</div>
+<button onclick="addToCart('Product 2',1499)">Add to Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/300?2">
-        <h3>Wireless Earbuds</h3>
-        <p class="price">₹1,499</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="card">
+<img src="photo3.jpg">
+<div class="card-content">
+<h3>Product 3</h3>
+<div class="price">₹1799</div>
+<button onclick="addToCart('Product 3',1799)">Add to Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/300?3">
-        <h3>Fitness Band</h3>
-        <p class="price">₹1,799</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="card">
+<img src="photo4.jpg">
+<div class="card-content">
+<h3>Product 4</h3>
+<div class="price">₹999</div>
+<button onclick="addToCart('Product 4',999)">Add to Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/300?4">
-        <h3>Bluetooth Speaker</h3>
-        <p class="price">₹1,299</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="card">
+<img src="photo1.jpg">
+<div class="card-content">
+<h3>Product 5</h3>
+<div class="price">₹499</div>
+<button onclick="addToCart('Product 5',499)">Add to Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/300?5">
-        <h3>Phone Stand</h3>
-        <p class="price">₹499</p>
-        <button>Add to Cart</button>
-    </div>
+</div>
 
-</section>
+<div class="cart-box" id="cartBox">
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<h3>Total: ₹<span id="total">0</span></h3>
+</div>
 
-<footer>
-    © 2026 Jaydip Store | All Rights Reserved
-</footer>
+<script>
+let cart=[];
+let total=0;
+
+function addToCart(name,price){
+cart.push({name,price});
+total+=price;
+document.getElementById("cartCount").innerText=cart.length;
+document.getElementById("total").innerText=total;
+displayCart();
+}
+
+function displayCart(){
+let items="";
+cart.forEach(item=>{
+items+=`<div class="cart-item">${item.name} - ₹${item.price}</div>`;
+});
+document.getElementById("cartItems").innerHTML=items;
+}
+
+function toggleCart(){
+document.getElementById("cartBox").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
