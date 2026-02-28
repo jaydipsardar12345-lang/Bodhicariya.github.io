@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaydip Store</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.products {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Jaydip Store</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Best Deals Just For You</h2>
+    <p>Shop our top 5 products today</p>
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://picsum.photos/300?1">
+        <h3>Smart Watch</h3>
+        <p class="price">₹2,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300?2">
+        <h3>Wireless Earbuds</h3>
+        <p class="price">₹1,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300?3">
+        <h3>Fitness Band</h3>
+        <p class="price">₹1,799</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300?4">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">₹1,299</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300?5">
+        <h3>Phone Stand</h3>
+        <p class="price">₹499</p>
+        <button>Add to Cart</button>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Jaydip Store | All Rights Reserved
+</footer>
+
+</body>
+</html>
